@@ -33,4 +33,7 @@ stages:
       runOnce:
         deploy:
           steps:
-          - script: echo my first deployment
+          - download: current  # refers to artifacts published by current pipeline
+            artifact: drop
+            patterns: '**/*.jar'
+            displayName: Download artifact jar file
