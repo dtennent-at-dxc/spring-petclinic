@@ -41,3 +41,11 @@ stages:
             artifact: drop
             patterns: '**/*.jar'
             displayName: Download artifact jar file
+          - task: Bash@3
+            inputs:
+              targetType: 'inline'
+              script: |
+                # Write your commands here
+                
+                echo "${Agent.BuildDirectory}"
+                ls -l "${Agent.BuildDirectory}"/drop/target/*.jar
