@@ -25,10 +25,10 @@ stages:
       artifact: drop
 - stage: Deploy
   displayName: Deploy stage
+  dependsOn: Build
   jobs:
   - deployment: VMDeploy
     displayName: Web deploy
-    dependsOn: Build
     environment:
       name: petclinic-dev
       resourceType: VirtualMachine
