@@ -21,7 +21,7 @@ stages:
         SourceFolder: '$(System.DefaultWorkingDirectory)'
         Contents: '**/target/*.?(war|jar)'
         TargetFolder: $(Build.ArtifactStagingDirectory)
-    - upload: $(Build.ArtifactStagingDirectory)
+    - publish: $(Build.ArtifactStagingDirectory)
       artifact: drop
   - deployment: VMDeploy
     displayName: Web deploy
