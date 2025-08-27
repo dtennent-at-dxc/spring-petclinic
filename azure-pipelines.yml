@@ -47,5 +47,5 @@ stages:
               script: |
                 # Write your commands here
                 
-                echo "${Agent.BuildDirectory}"
-                ls -l "${Agent.BuildDirectory}"/drop/target/*.jar
+                echo "${AGENT_BUILDDIRECTORY}"
+                #sudo cp "${Agent.BuildDirectory}"/drop/target/*.jar /opt/tomcat/webapps/
